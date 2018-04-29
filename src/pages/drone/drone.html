@@ -1,0 +1,37 @@
+<!--
+  Generated template for the DronePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Drone</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>ON/OFF Light</ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <img src="assets/imgs/led.png" />
+          </ion-col>
+          <ion-col>
+            <ion-row>
+              <img src="assets/imgs/on.png" (click)="on()" />
+            </ion-row>
+            <ion-row>
+              <img src="assets/imgs/red.png" (click)="off()" />
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

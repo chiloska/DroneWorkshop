@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Android-Drone Workshop
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button (click)="change()">Change</button>
+  <ion-card>
+    <ion-card-header>
+      Bluetooth Information
+    </ion-card-header>
+    <ion-card-content>
+      <p>Enable: {{success}}</p>
+      <p>Error Enable: {{error}}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Paired Bluetooth
+    </ion-card-header>
+    <ion-list>
+      <button ion-item *ngFor="let device of devices" (click)="connectDevice(device.address, device.name)">{{device.name}}</button>
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Devices Available
+      <ion-icon name="refresh" float-right (click)="listUnpairedDevices()"></ion-icon>
+    </ion-card-header>
+    <ion-list>
+      <button ion-item *ngFor="let device of unpaired" (click)="connectDevice(device.address)">{{device.name}}</button>
+    </ion-list>
+  </ion-card>
+</ion-content>
